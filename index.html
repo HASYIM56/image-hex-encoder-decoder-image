@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image HEX Encoder - HASYIM56</title>
+    <link rel="icon" href="img/H56.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/pico.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/effect.css">
+    <link rel="stylesheet" href="static/author-text.css">
+    <link rel="stylesheet" href="static/pico.classless.conditional.grey.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main class="container fade-in">
+        <h1 class="fade-in">Image HEX Encoder/Decoder</h1>
+        <form id="imageForm" class="fade-in" enctype="multipart/form-data">
+            <div class="file-input-container">
+                <label for="fileInput" class="file-label">
+                    <i class="fas fa-upload"></i>
+                    <br>Upload file (Image to Encode or HEX to Decode)
+                </label>
+                <input type="file" id="fileInput" name="File" accept="*/*" required>
+            </div>
+            <div class="mode-selector">
+                <label for="modeSelect">Choose Tool Mode:</label>
+                <select id="modeSelect">
+                    <option value="encode">Encode Image to HEX</option>
+                    <option value="decode">Decode HEX to Image</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="loadingContainer" style="display: none; width: 100%; margin-top: 15px;">
+            <div id="loadingBar" style="width: 0; height: 20px; background-color: #4CAF50; border-radius: 8px;"></div>
+            <p id="loadingText" style="color: white; margin-top: 5px; font-family: 'kustom'; text-align: center;">0%</p>
+        </div>
+        <div id="statusMessage" class="fade-in"></div>
+        <div id="downloadContainer" style="display: none; margin-top: 20px;">
+            <button id="downloadButton">
+                <i class="fas fa-download"></i> Download Decoded Image
+            </button>
+        </div>
+        <div id="imageContainer" style="display: none; margin-top: 20px;">
+            <img id="decodedImage" alt="Decoded Image" style="max-width: 100%;"/>
+        </div>
+    </main>
+    <div class="author-text fade-in">
+        <p>CREATOR :</p>
+        <span class="highlight">HASYIM56</span>
+    </div>
+    <footer>
+        <button id="bugReportButton" onclick="window.location.href='bug-report/bugreport.html'">
+            <i class="fas fa-bug"></i> Lapor Bug
+        </button>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js"></script>
+    <script src="static/youtube.js"></script>
+</body>
+</html>
