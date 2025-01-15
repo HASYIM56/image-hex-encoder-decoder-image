@@ -210,11 +210,16 @@ footer {
     transform: scale(1.05);
 }
 
-#imageContainer {
-    display: none;
+.image-container {
+    display: block;
     text-align: center;
+    max-height: calc(100vh - 200px); /* Ensure it doesn't overlap the footer or author text */
+    overflow-y: auto; /* Enable scrolling for large images */
+    padding-bottom: 50px; /* Ensure image doesn't get cut off */
 }
 
 #decodedImage {
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
