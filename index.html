@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image HEX Encoder - HASYIM56</title>
+    <title>Image HEX Encoder/Decoder - HASYIM56</title>
     <link rel="icon" href="img/H56.png" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/pico.css">
     <link rel="stylesheet" href="static/styles.css">
@@ -38,8 +38,12 @@
         </div>
         <div id="statusMessage" class="fade-in"></div>
         <div id="downloadContainer" style="display: none; margin-top: 20px;">
-            <button id="downloadButton">
+            <!-- Download buttons for each mode -->
+            <button id="downloadButton" style="display: none;">
                 <i class="fas fa-download"></i> Download Decoded Image
+            </button>
+            <button id="downloadEncodedButton" style="display: none;">
+                <i class="fas fa-download"></i> Download Encoded HEX
             </button>
         </div>
         <div id="imageContainer" class="image-container" style="display: none; margin-top: 20px;">
