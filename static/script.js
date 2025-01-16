@@ -39,8 +39,10 @@ $(document).ready(function () {
             $('#loadingContainer').hide();
             $('#statusMessage').text("Image encoded to HEX successfully.");
             $('#downloadContainer').show();
+            $('#downloadEncodedButton').show(); // Show the encoded download button
+            $('#downloadButton').hide(); // Hide the decoded download button
 
-            $('#downloadButton').click(function() {
+            $('#downloadEncodedButton').click(function() {
                 const link = document.createElement('a');
                 link.href = fileUrl;
                 link.download = "files_H56.txt";
@@ -79,6 +81,9 @@ $(document).ready(function () {
             $('#decodedImage').attr('src', url);
 
             $('#downloadContainer').show();
+            $('#downloadButton').show(); // Show the decoded download button
+            $('#downloadEncodedButton').hide(); // Hide the encoded download button
+
             $('#downloadButton').click(function() {
                 const link = document.createElement('a');
                 link.href = url;

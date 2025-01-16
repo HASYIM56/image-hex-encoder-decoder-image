@@ -54,6 +54,9 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .file-label {
@@ -74,7 +77,8 @@ input[type="file"] {
     padding: 10px;
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
     color: #FFFFFF;
     font-family: 'kustom', sans-serif;
     cursor: pointer;
@@ -83,6 +87,7 @@ input[type="file"] {
     width: 100%;
     transition: transform 0.2s ease;
     font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 input[type="file"]:focus {
@@ -206,6 +211,26 @@ footer {
 }
 
 #downloadButton:hover {
+    background-color: #3d81f7;
+    transform: scale(1.05);
+}
+
+#downloadEncodedButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    background-color: #3d81f7;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#downloadEncodedButton i {
+    margin-right: 5px;
+}
+
+#downloadEncodedButton:hover {
     background-color: #3d81f7;
     transform: scale(1.05);
 }
